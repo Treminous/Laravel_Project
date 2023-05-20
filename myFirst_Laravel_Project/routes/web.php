@@ -18,8 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('post', function () {
-    return view('post',
-    ['post'=>'<h1> Hello Laravel Experts/ Beginners <h1>']);
+    return view('post', 
+   ['post'=>file_get_contents( __DIR__.'/../resources/posts/myFirst_post')
+]);
 });
 
 Auth::routes();
