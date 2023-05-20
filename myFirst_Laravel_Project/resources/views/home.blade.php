@@ -22,7 +22,7 @@ use App\Models\message;
               {
                  {
                     echo $message->body.'<br>';
-                    echo $message->created_at.'<br>'.'<br>';
+                    echo $message->created_at.'<br>'.'<br>'.'<hr>';
                     
                  }
               }
