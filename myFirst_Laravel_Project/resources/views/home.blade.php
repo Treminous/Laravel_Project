@@ -21,8 +21,8 @@ use App\Models\message;
             foreach ($messages as $message)
               {
                  {
-                    echo $message->body;
-                    echo $message->created_at;
+                    echo $message->body.'<br>';
+                    echo $message->created_at.'<br>'.'<br>';
                     
                  }
               }
