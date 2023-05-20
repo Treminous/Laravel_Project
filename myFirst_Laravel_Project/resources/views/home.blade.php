@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+use App\Models\message;
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -13,10 +15,25 @@
                    <button class="btn btn-primary">post</button>
                 </div>
                 <hr>
-               
+                <div class="card-body">
+                    <?php
+                    
+            foreach ($messages as $message)
+              {
+                 {
+                    echo $message->body;
+                    echo $message->created_at;
+                    
+                 }
+              }
+            end($message);
+        
+            ?>
+         </div>
             </div>
-            post
+        
         </div>
     </div>
 </div>
 @endsection
+

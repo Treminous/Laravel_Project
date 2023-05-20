@@ -25,7 +25,9 @@ class HomeController extends Controller
     public function index()
     {
         $message=DB::table('messages')->where('user_id',1)->get();
-        dd($message);
-        return view('home');
+        //dd($message);
+        return view('home',
+    ['messages'=>$message]
+    );
     }
 }
