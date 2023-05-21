@@ -14,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('posts');
 });
 
-Route::get('post', function () {
-    return view('post', 
-   ['post'=>file_get_contents( __DIR__.'/../resources/posts/myFirst_post')
-]);
+Route::get('post/{post}', function ($slug) {
+    return $slug;
+//     return view('post', 
+//    ['post'=>file_get_contents(__DIR__.'/../resources/posts/myFirst-post.html')]);
 });
 
 Auth::routes();

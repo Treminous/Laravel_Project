@@ -22,6 +22,7 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+         
        
     </head>
     <body class="antialiased">
@@ -108,9 +109,8 @@
                         </div>
                     </div>
                 </div>
-               
-                <a href="post">post</a>
-                
+                <a href="/post"> Post</a>
+                <!-- <a href="post">My First Post</a> -->
 
                 <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
                     <div class="text-center text-sm text-gray-500 sm:text-left">
