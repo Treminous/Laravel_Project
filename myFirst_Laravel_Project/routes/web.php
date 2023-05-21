@@ -18,9 +18,16 @@ Route::get('/', function () {
 });
 
 Route::get('post/{post}', function ($slug) {
-    return $slug;
-//     return view('post', 
-//    ['post'=>file_get_contents(__DIR__.'/../resources/posts/myFirst-post.html')]);
+    //return $slug;
+    $path=__DIR__."/../resources/posts/{$slug}.html";
+    if(! file_exists($path))
+    {
+     ddd("File does not exist");
+    }
+    $post=file_get_contents($path);
+   return view('post', 
+  ['post'=>$post]);
+  
 });
 
 Auth::routes();
